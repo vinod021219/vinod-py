@@ -1,0 +1,47 @@
+
+'''
+rock vs paper-> paper wins
+rock vs scissor-> rock wins
+paper vs scissor-> scissor wins
+
+'''
+import random
+I=["ROCK","SCISSOR","PAPER"]
+
+while True:
+    computercount=0
+    usercount=0
+    userchoice=int(input('''
+GAME START......
+1 YES
+2 NO | Exit
+    
+         '''))
+    if userchoice==1:
+        for i in range(1,6):
+            userinput=int(input('''
+1 ROCK
+2 SCISSOR
+3 PAPER
+         
+            '''))
+            if userinput==1:
+                userchoice="ROCK"
+            elif userinput==2:
+                userchoice="SCISSOR"
+            elif userinput==3:
+                userchoice="PAPER"
+            computerchoice= random.choice
+            if computerchoice==userchoice:
+                print ("computer Value",computerchoice)
+                print("user value",userchoice)
+                print("game over")
+                computercount = +1
+            elif (userchoice == "ROCK" and computerchoice == "SCISSOR") or (userchoice == "PAPER" and computerchoice == "ROCK") or (userchoice=="SCISSOR" and computerchoice=="PAPER"):
+                print("computer Value", computerchoice)
+                print("user value", userchoice)
+                print("you win")
+                usercount = usercount = +1
+
+    else:
+        break
